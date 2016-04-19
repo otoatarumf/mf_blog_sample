@@ -5,6 +5,7 @@
 * gulp 3.9.0
 * Browser: Chrome:  49.0.2623.110 (64-bit)
 
+## ビルド
 
 ```
 npm install
@@ -19,9 +20,7 @@ node server.js
 ```
 
 
-Launch a browser and visit
-
 ```
-http://localhost:3333/async_await.html
+http://localhost:3333/generator.html
 http://localhost:3333/async_await.html
 ```
