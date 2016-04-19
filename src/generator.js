@@ -40,17 +40,14 @@ let serveDesertAndCoffee = () => {
 
 let serveFullCourse = () => {
  return Promise.coroutine(function* () {
-
     let set = ''
     set += yield serveAppetizers();      //serveAppetizers()がresolveするまで待機
     set += yield serveSoup();            //serveSoup()がresolveするまで待機
     set += yield serveMainDish();        //serveMainDish()がresolveするまで待機
     set += yield serveDesertAndCoffee(); //serveDesertAndCoffee()がresolveするまで処理を待機
 
-    return set
-    })().then((result) => {
-      console.log(`お客様に${result}を提供しました。`)
-  });
+    console.log(`お客様に${set}を提供しました。`);
+  })();
 }
 
 serveFullCourse();

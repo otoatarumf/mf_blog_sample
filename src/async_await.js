@@ -5,6 +5,7 @@ const req = require('superagent')
 let getImagesWithAjax = ()=> {
   return new Promise((resolve, reject) => {
     const url = 'http://localhost:3333/images';
+    // サーバーから画像URLの配列を取得
     req
       .get(url)
       .end((err, res) => {
@@ -14,6 +15,7 @@ let getImagesWithAjax = ()=> {
   });
 }
 
+// asyncキーワードを関数に付与する
 let showImages = async () => {
 
   try {
