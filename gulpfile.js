@@ -16,7 +16,7 @@ let startWatchify = () => {
     const sources = glob.sync(`${srcDir}**/*.js`); // コンパイル対象のファイル
 
     sources.forEach((entryPoint) => {
-        let distFileName = entryPoint.replace(srcDir, '')
+        let distFileName = entryPoint.replace(srcDir, '');
 
         // browserify: オプション群
         let browserifyOptions = {
